@@ -6,10 +6,17 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import javax.swing.JInternalFrame;
+import java.awt.Panel;
+import javax.swing.SwingConstants;
+import java.awt.TextField;
 
 public class FourWindow extends JFrame {
 
 	private JPanel contentPane;
+	private JTextField txtnombres;
 
 	/**
 	 * Launch the application.
@@ -37,6 +44,20 @@ public class FourWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		contentPane.setLayout(new BorderLayout(0, 0));
 		setContentPane(contentPane);
+		
+		JPanel panel = new JPanel();
+		contentPane.add(panel, BorderLayout.CENTER);
+		
+		JPanel panel_1 = new JPanel();
+		panel.add(panel_1);
+		
+		JLabel lblNombres = new JLabel("Nombres:");
+		panel_1.add(lblNombres);
+		
+		txtnombres = new JTextField();
+		txtnombres.setToolTipText("Ingrese El Nombre");
+		panel_1.add(txtnombres);
+		txtnombres.setColumns(10);
 	}
 
 }
